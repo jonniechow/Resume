@@ -1,0 +1,205 @@
+\documentclass{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fontawesome}
+    \usepackage{amsmath}
+    \usepackage{multicol} 
+    \usepackage[misc]{ifsym}
+    \input{glyphtounicode}
+
+    \pdfgentounicode=1
+    
+    \textheight=10in
+    \pagestyle{empty}
+    %\raggedbottom
+    \raggedright
+    
+    %  \renewcommand{\encodingdefault}{cg}
+      %\renewcommand{\rmdefault}{lgrcmr}
+      
+    %Thanks to: 
+    %http://web.archive.org/web/20110809021159/http://www.cmmichael.com/blog/2006/04/ 
+    %12/latex-resume-template
+    
+    \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+    % DEFINITIONS FOR RESUME
+    \usepackage{xcolor}  
+    \usepackage[hidelinks]{hyperref} 
+    
+    \newcommand{\click}[2]{\href{http://#1}{\colorlet{temp}{.}\color{blue}{\underline{\color{temp}#2}}\color{temp}}}  
+    \newcommand{\clicks}[2]{\href{https://#1}{\colorlet{temp}{.}\color{blue}{
+    \underline{\color{temp}#2}}\color{temp}}}  
+    
+    \newcommand{\area}[2]{\begin{verse}\textbf{#1}   #2 \end{verse}  
+    }
+    \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+    
+    \newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} 
+    \vspace*{-6pt} \lineunder}
+    
+    \newcommand{\employer}[4]{{ \textbf{\uppercase{#1}} \hfill#2\\ 
+    \emph{#3}} \hfill\textit{#4} \vspace*{1pt}}
+    
+    \newcommand{\contact}[3]{
+    \vspace*{-14pt}
+    \begin{center}
+    {\Large \scshape \textbf{#1}}\\
+    #2 %\lineunder 
+    \\#3
+    \end{center}
+    \vspace*{-9pt}
+    }
+    
+    \newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep 
+    -2pt}}{\vspace*{4pt}\end{list}}
+    
+    \newcommand{\school}[4]{
+     \textbf{#1} #2 $\bullet$ #3\\ 
+    #4 \\ 
+    }
+    
+    \newcommand{\highschool}[4]{
+     \textbf{#1} #2\\ \vspace*{5pt}
+    
+    }
+    
+    \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+    
+    \newcommand{\education}[2]{{ \textbf{\uppercase{#1}} \hfill#2
+     \\ }}
+    
+    
+    % END RESUME DEFINITIONS
+    
+    \begin{document}
+    
+    \small
+    \smallskip
+    \vspace*{-44pt}
+    \contact{Jonny Chow}
+    { \faGithub\,\click{github.com/jonniechow}{jonniechow} $\vert$ 917-862-0328 $\vert$ jonnyxchow@gmail.com $\vert$ Flushing, New York }
+    
+
+    \header{Education}
+    \vspace*{3pt}
+    
+    \education{University of Michigan}{Ann Arbor, MI}
+    \emph{B.S. Computer Science \hfill Sep 2016 - Apr 2020}
+    
+    
+    \setlength{\columnsep}{0in}
+    {\bf Coursework:}{
+        \vspace*{-10pt}
+        \begin{multicols}{2}
+        \begin{itemize}
+          \item Introduction to Operating Systems (EECS 482)
+          \vspace*{-3pt}
+          \item User Interface Development (EECS 493)
+          \vspace*{-3pt}
+          \item Web Systems (EECS 485)
+          \vspace*{-3pt}
+          \item Computer Security (EECS 388)
+          \vspace*{-3pt}
+          \item Computer Organization (EECS 370)
+          \vspace*{-3pt}
+          \item Data Structures \& Algorithms (EECS 281)
+          \vspace*{-3pt}
+        \end{itemize}
+      \end{multicols} }
+
+      \vspace*{-10pt}
+      \header{Experience}
+      \employer{J.P. Morgan Chase \& Co. Code For Good}{Chicago, Illinois}
+      {Hackathon Participant}{Oct 2018}
+          \begin{achievements}
+          \item Created a web application for Out and Equal, a non-profit organization looking for a solution for people in the LGBTQ+ workforce 
+          to connect to resources and other people in the LGBTQ+ community
+          \item Led a group of six members by assigning roles and dividing up tasks based on experience and skills
+          \item Demonstrated the features of our web application to our client and dozens of JP Morgan technical employees
+          \item Incorporated cybersecurity protocols by preventing SQL injections and cross-site scripting attacks
+          \item Orchestrated use of Flask backend along with Adobe XD as a prototype for the frontend and deployed on Amazon Web Services using EC2 instance 
+  
+          \end{achievements}
+  
+      \employer{MEGA ACADEMY}{Flushing, New York}
+      {Teacher's Assistant}{Jan 2015 - Aug 2018}
+          \begin{achievements}
+          \item Tutored 60 middle school students daily in math and literature
+          \item Enforced rules to engage learning experience in the classroom environment
+          \item Graded student work with attention to detail both quickly and carefully
+          \item Assisted both students and parents with concerns and problems
+          \item Provided training and leadership to new teacher assistants for maximum efficiency in work area
+          \end{achievements}
+    
+      
+    \header{Projects}
+
+    \textbf{Thread Library} \hspace*{0pt}\hfill \textit{Feb 2019}
+    \begin{achievements}
+        \item Worked together in a group of three to write a thread library following a FIFO scheduling order
+        \item Implemented functions in the C++ thread, mutex, and conditional variable classes
+        \item Designed code to thoroughly test how threads and monitors work on uniprocessor and multiprocessor systems
+        \item Incorporated timer interrupts and inter-processor interrupts to be handled by the CPU 
+        \item Optimized CPU efficiency by minimizing number of calls to swapcontext and setcontext
+    \end{achievements}
+
+    \textbf{Wikipedia Search Engine} \hspace*{0pt}\hfill \textit{Dec 2018}
+    \begin{achievements}
+        \item Created a search engine using information retrieval based on term frequency, inverse document frequency, and PageRank scores
+        \item Designed an inverted index using map and reduce pipeline with Hadoop framework 
+        \item Used an index server REST API that handled search queries and returns a list of relevant results
+        \item Created a second React driven GUI and a database for the search engine  
+    \end{achievements}
+
+    \textbf{Map Reduce Python Server} \hspace*{0pt}\hfill \textit{Nov 2018}
+    \begin{achievements}
+        \item Implemented a MapReduce single machine, multi-process, multi-threaded Python server
+        \item Incorporated Master class to manage jobs, distribute jobs evenly among workers, and handle faults
+        \item Created Worker class to register themselves with master, await commands, perform mapping, reducing, 
+        and grouping tasks based on instructions given by the master
+    \end{achievements}
+
+    \textbf{Instagram Clone} \hspace*{0pt}\hfill \textit{Sep 2018}
+    \begin{achievements}
+        \item Pioneered an instagram clone implemented with client-side dynamic pages and a REST API
+        \item Wrote a client application in JavaScript that runs in the browser and makes AJAX calls to the REST API
+        \item Implemented using ReactJS with a MySQL database and deployed on AWS EC2
+    \end{achievements}
+
+    \textbf{Learning Log} \hspace*{0pt}\hfill \textit{Jun 2018}
+    \begin{achievements}
+        \item Created a web application allowing users to log topics and create entries they learn about each topic
+        \item Facilitates user experience by allowing addition of new topics, new entries, and ability to edit any response
+        \item Implemented using Python, Django, bootstrap-3, jQuery, JavaScript, and deployed with Heroku
+    \end{achievements} 
+
+    \textbf{Most Popular GitHub Repositories} \hspace*{0pt}\hfill \textit{May 2018}
+    \begin{achievements} 
+        \item Formulated a website that displays the most starred GitHub repositories using current data
+        \item Called GitHub API to request data and used Python's Pygal module to visualize data as histograms
+        \item Navigates user to the repository by clicking on the corresponding histogram
+    \end{achievements}
+    
+   
+
+    \header{Languages and Frameworks}
+    \vspace*{-10pt}
+    \setlength{\columnsep}{0in}
+    \begin{multicols}{2}
+      \begin{itemize}
+        \item Proficient: \CC, C, Python, HTML, CSS, \LaTeX
+        \item Familiar: Flask, ReactJS, JavaScript, Django, Hadoop, SQLite
+      \end{itemize}
+    \end{multicols}
+    
+    \vspace*{-10pt}
+    
+   
+    
+    
+    
+
+    
+    
+    \end{document}
